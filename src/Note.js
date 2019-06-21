@@ -33,7 +33,7 @@ class Note extends Component {
 			<div className="note">
 				<form>
 					<textarea ref={ input => this._newText = input }/>
-					<button><FaSave onClick={this.save}/></button>
+					<button><FaSave onClick={ this.save }/></button>
 				</form>
 			</div>
 		)
@@ -41,10 +41,10 @@ class Note extends Component {
 	renderDisplay() {
 		return (
 			<div className="note">
-				<p>Learn React</p>
+				<p>{ this.props.children }</p>
 				<span>
-					<button onClick={this.edit} id="edit"><FaPen /></button>
-					<button onClick={this.remove} id="remove"><FaTrash /></button>
+					<button onClick={ this.edit } id="edit"><FaPen /></button>
+					<button onClick={ this.remove } id="remove"><FaTrash /></button>
 				</span>
 			</div>
 		)	
